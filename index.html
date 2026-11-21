@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d0a">
+  <meta name="description" content="Portfolio de Guillermo Biemmi. Estudiante de TI en UTEC: desarrollo con Java, proyectos personales y formación en AWS.">
+  <title>Guillermo Biemmi · Desarrollo & cloud</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <svg class="symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 4h6l3 2 3-2h6v15h-6l-3 2-3-2H3Zm9 2v15"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="m8 12-2 9 6-3 6 3-2-9"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V3H3v13h5"/></symbol>
+  </defs></svg>
+
+  <aside class="sidebar">
+    <a class="brand" href="#inicio" aria-label="Guillermo Biemmi, inicio"><span class="brand-mark">gb<span>_</span></span><span class="brand-name"><b>GUILLERMO</b><br><b>BIEMMI</b><span>desarrollo / cloud</span></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú <span aria-hidden="true">☰</span></button>
+    <div class="sidebar-content" id="sidebar-content">
+      <div class="identity"><img class="portrait" src="./assets/guillermo.jpeg" alt="Guillermo Biemmi" width="72" height="72"><p>Estudiante de TI<strong>UTEC · Uruguay</strong></p></div>
+      <nav id="main-nav" aria-label="Navegación principal">
+        <a href="#inicio" aria-current="location"><svg><use href="#i-code"/></svg>Inicio<span class="nav-index" aria-hidden="true">/</span></a>
+        <a href="#proyectos"><svg><use href="#i-grid"/></svg>Proyectos</a>
+        <a href="#formacion"><svg><use href="#i-book"/></svg>Formación</a>
+        <a href="#herramientas"><svg><use href="#i-code"/></svg>Herramientas</a>
+        <a href="#credenciales"><svg><use href="#i-award"/></svg>Credenciales</a>
+        <a href="#contacto"><svg><use href="#i-mail"/></svg>Contacto</a>
+      </nav>
+      <div class="sidebar-bottom"><p class="tiny-label">HECHO PARA EXPLORAR</p><p>Ideas que se convierten<br>en herramientas.</p><button id="theme-toggle" class="utility-button" type="button"><svg><use href="#i-sun"/></svg><span>Modo claro</span></button><button id="motion-toggle" class="utility-button" type="button" aria-pressed="true"><span class="motion-light" aria-hidden="true"></span><span>Fondo animado</span></button><a class="sidebar-github" href="https://github.com/elguigu100" target="_blank" rel="noopener noreferrer">github.com/elguigu100</a></div>
+    </div>
+  </aside>
+
+  <div class="page-shell">
+    <header class="topbar"><span class="breadcrumb"><span>~/guillermo</span><span id="current-path">/inicio</span></span><span class="topbar-note">PORTFOLIO PERSONAL <span>2026</span></span></header>
+    <main id="contenido">
+      <section id="inicio" class="hero section-anchor" aria-labelledby="hero-title">
+        <div class="hero-copy"><p class="eyebrow"><span aria-hidden="true">[</span> DESARROLLO CON PROPÓSITO <span aria-hidden="true">]</span></p><h1 id="hero-title">Guillermo<br><span>Biemmi<span class="cursor" aria-hidden="true">_</span></span></h1><p class="hero-role">Estudiante de TI <span>/</span> UTEC</p><p class="hero-intro">Convierto necesidades concretas en herramientas útiles. Aprendo construyendo, probando y mejorando.</p><div class="hero-actions"><a class="button button-primary" href="#proyectos">Explorar proyectos</a><a class="button button-secondary" href="#contacto">Hablemos</a></div><div class="hero-stack" aria-label="Tecnologías utilizadas"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span><span>Unity</span></div></div>
+        <div class="hero-terminal"><div class="terminal-title"><span class="terminal-dot" aria-hidden="true"></span>guillermo.profile <span class="file-extension">.json</span></div><div class="profile-code" aria-label="Resumen de mi perfil"><p class="code-comment">// una idea, un paso a la vez</p><p><span class="code-punctuation">{</span></p><p class="indent"><span class="code-key">"nombre"</span>: <span class="code-string">"Guillermo Biemmi"</span>,</p><p class="indent"><span class="code-key">"formación"</span>: <span class="code-string">"TI · UTEC"</span>,</p><p class="indent"><span class="code-key">"enfoque"</span>: <span class="code-string">"aprender haciendo"</span>,</p><p class="indent"><span class="code-key">"intereses"</span>: <span class="code-punctuation">[</span></p><p class="double-indent code-string">"desarrollo de software",</p><p class="double-indent code-string">"cloud e infraestructura"</p><p class="indent"><span class="code-punctuation">]</span></p><p><span class="code-punctuation">}</span></p></div><div class="terminal-foot"><span>Java + SQL + curiosidad</span><svg><use href="#i-code"/></svg></div></div>
+        <div class="academic-strip"><div><strong>94<span>créditos</span></strong><p>Formación universitaria</p></div><div><strong>1<span>er año aprobado</span></strong><p>Sin materias pendientes</p></div><div><strong>2<span>proyectos</span></strong><p>Distintos problemas, misma iniciativa</p></div></div>
+      </section>
+
+      <section id="proyectos" class="section-anchor section-space" aria-labelledby="projects-title"><div class="section-heading"><div><p class="eyebrow">~/proyectos</p><h2 id="projects-title">Del problema a la práctica<span>.</span></h2></div><p>Dos proyectos personales.<br>Dos formas de seguir aprendiendo.</p></div>
+        <article class="project project-admin"><div class="project-visual admin-visual"><div class="visual-toolbar"><span>Administrativo</span><span>VISTA CON DATOS FICTICIOS</span></div><img src="./assets/administrativo-clientes.webp" alt="Dashboard de Administrativo: comparación mensual de cobranzas con datos ficticios" loading="lazy" width="1366" height="1050"><span class="visual-caption">Java / Spring Boot / PostgreSQL</span></div><div class="project-copy"><p class="project-status"><span class="bracket">[ EN DESARROLLO ]</span> Aplicación web</p><h3>Administrativo</h3><p class="project-summary">Una necesidad real de mi entorno laboral, convertida en una aplicación.</p><p>Clientes, zonas y planillas en un mismo lugar. Asignación de visitas, resultados, históricos y seguimiento de cobranzas con permisos según el rol.</p><div class="project-tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>Docker</span></div><button class="text-button" type="button" data-project="administrativo">Explorar funciones <span aria-hidden="true">+</span></button></div></article>
+        <article class="project project-tabletop"><div class="project-visual tabletop-visual"><img class="app-preview" src="./assets/tabletop-dados.webp" alt="Tabletop Utilities ejecutándose: dado D6 y resultado de una tirada" loading="lazy" width="1280" height="720"><span class="visual-caption">Captura real · versión de escritorio en Unity</span></div><div class="project-copy"><p class="project-status"><span class="bracket">[ VERSIÓN ANDROID ]</span> Utilidades para juegos de mesa</p><h3 class="app-title"><img src="./assets/tabletop-icon.png" alt="" width="44" height="44">Tabletop Utilities</h3><p class="project-summary">De una idea personal a una aplicación instalable.</p><p>Dados, contadores de vida, lanzamiento de moneda y creación de grupos. Herramientas sencillas para acompañar una partida y trabajar la interacción.</p><div class="project-tags"><span>Unity</span><span>C#</span><span>Android</span></div><button class="text-button" type="button" data-project="tabletop">Conocer el proyecto <span aria-hidden="true">+</span></button></div></article>
+      </section>
+
+      <section id="formacion" class="section-anchor section-space" aria-labelledby="education-title"><div class="section-heading"><div><p class="eyebrow">~/formación</p><h2 id="education-title">La base detrás del código<span>.</span></h2></div></div><div class="education-layout"><div class="education-main"><span class="outline-label">UTEC · TECNOLOGÍAS DE LA INFORMACIÓN</span><h3>Primer año aprobado.<br>El aprendizaje continúa.</h3><p>94 créditos y ninguna materia pendiente. Una base académica que llevo a la práctica en proyectos personales.</p><div class="education-note"><span aria-hidden="true">&gt;</span><p>Mi próximo foco: profundizar en redes e infraestructura, conectando lo que desarrollo con la forma en que se despliega y opera.</p></div></div><dl class="knowledge-list"><div><dt>Programación</dt><dd>Java, algoritmos y patrones de diseño.</dd></div><div><dt>Calidad de software</dt><dd>Testing y validación de comportamientos.</dd></div><div><dt>Datos</dt><dd>SQL y bases de datos.</dd></div><div><dt>Seguridad y cloud</dt><dd>Fundamentos de seguridad y computación en la nube.</dd></div></dl></div></section>
+
+      <section id="herramientas" class="section-anchor section-space" aria-labelledby="tools-title">
+        <div class="section-heading"><div><p class="eyebrow">~/herramientas</p><h2 id="tools-title">Lo que llevo a la práctica<span>.</span></h2></div></div>
+        <div class="tools-grid">
+          <article class="tool-card"><h3>Desarrollo y pruebas</h3><div class="project-tags"><span>Java</span><span>Spring Boot</span><span>JUnit</span><span>C#</span><span>Unity</span><span>Node.js</span></div><p>Aplicaciones web con Java, interacciones con C# en Unity y Node.js para ejecutar pruebas de JavaScript.</p></article>
+          <article class="tool-card"><h3>Web y datos</h3><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span><span>PostgreSQL</span><span>Git / GitHub</span></div><p>Interfaces, lógica en el navegador, consultas y bases de datos. Control de versiones para seguir la evolución de los proyectos.</p></article>
+          <article class="tool-card"><h3>Redes e infraestructura</h3><div class="project-tags"><span>Cisco Packet Tracer</span><span>Máquinas virtuales</span><span>Docker</span><span>AWS · formación</span></div><p>Base académica aprobada y prácticas de conexiones de red, máquinas virtuales y enrutamiento. Continúo profundizando en infraestructura y cloud.</p></article>
+        </div>
+      </section>
+
+      <section id="credenciales" class="section-anchor section-space" aria-labelledby="credentials-title"><div class="section-heading"><div><p class="eyebrow">~/credenciales</p><h2 id="credentials-title">Aprender. Practicar. Acreditar<span>.</span></h2></div></div><article class="badge-panel"><a class="badge-image" href="https://www.credly.com/badges/9b9feaf5-bb16-41b6-ac58-16a0787f8060/public_url" target="_blank" rel="noopener noreferrer"><img src="./assets/aws-cloud-quest.png" alt="Insignia AWS Cloud Quest: Cloud Practitioner — Training Badge; abrir en Credly" width="601" height="601" loading="lazy"></a><div><p class="eyebrow">AWS · INSIGNIA DE FORMACIÓN</p><h3>AWS Cloud Quest:<br>Cloud Practitioner</h3><p>Training Badge por las actividades prácticas completadas en AWS Cloud Quest. Emitida por Amazon Web Services Training and Certification.</p><a class="text-button" href="https://www.credly.com/badges/9b9feaf5-bb16-41b6-ac58-16a0787f8060/public_url" target="_blank" rel="noopener noreferrer">Ver credencial en Credly <span aria-hidden="true">+</span></a></div></article><div class="course-list"><article><div class="course-icon"><svg><use href="#i-award"/></svg></div><div><p class="tiny-label">AWS · CURSO COMPLETADO</p><h3>AWS Security Fundamentals</h3><p>19 de noviembre de 2026</p></div><a href="./assets/aws-security-fundamentals.pdf" target="_blank" rel="noopener noreferrer">Ver certificado <span class="file-type">PDF</span></a></article><article><div class="course-icon"><svg><use href="#i-award"/></svg></div><div><p class="tiny-label">AWS · CURSO COMPLETADO</p><h3>Introduction to Generative AI<br><span>Art of the Possible · Español LATAM</span></h3><p>18 de noviembre de 2026</p></div><a href="./assets/aws-generative-ai.pdf" target="_blank" rel="noopener noreferrer">Ver certificado <span class="file-type">PDF</span></a></article></div></section>
+
+      <section class="terminal-section section-space" aria-labelledby="terminal-heading"><div class="terminal-title"><span class="terminal-dot" aria-hidden="true"></span><h2 id="terminal-heading">portfolio.sh</h2><span class="terminal-hint">INTERACTIVO</span></div><div id="terminal-output" class="terminal-output" role="log" aria-live="polite" aria-relevant="additions"><p><span class="code-string">Bienvenido a mi portfolio.</span> Escribí <strong>help</strong> para explorar.</p></div><form id="terminal-form" autocomplete="off"><label for="terminal-input"><span aria-hidden="true">visitante@guillermo:~$</span><span class="sr-only">Comando del portfolio</span></label><input id="terminal-input" name="command" type="text" maxlength="80" spellcheck="false" placeholder="help" aria-describedby="terminal-help"><button type="submit" class="terminal-submit">Ejecutar</button></form><p id="terminal-help" class="terminal-help">Comandos: help · proyectos · formación · credenciales · contacto · tema · limpiar</p></section>
+
+      <section id="contacto" class="section-anchor contact-section section-space" aria-labelledby="contact-title"><p class="eyebrow">~/contacto</p><h2 id="contact-title">El próximo paso empieza<br>con una conversación<span>_</span></h2><p>¿Querés conocer más sobre un proyecto o intercambiar ideas sobre tecnología? Podés encontrarme acá.</p><div class="contact-links"><a class="email-link" href="mailto:GuillermoBiemmi02@gmail.com">GuillermoBiemmi02@gmail.com</a><button class="icon-button" type="button" id="copy-email" aria-label="Copiar correo electrónico"><svg><use href="#i-copy"/></svg></button></div><p id="copy-status" class="copy-status" role="status"></p><div class="social-links"><a href="https://www.linkedin.com/in/guillermo-biemmi-7505232b5" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/elguigu100" target="_blank" rel="noopener noreferrer">GitHub</a></div></section>
+    </main>
+    <footer><span>Guillermo Biemmi <span class="footer-slash">/</span> <span id="footer-year">2026</span></span><span>Aprender · Construir · Mejorar</span><a href="#inicio">Volver al inicio</a></footer>
+  </div>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="project-dialog-title"><button type="button" class="dialog-close" aria-label="Cerrar detalle del proyecto">Cerrar <span aria-hidden="true">×</span></button><div id="project-dialog-content"></div></dialog>
+  <script src="./downloads.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
